@@ -1,29 +1,34 @@
 #include<bits/stdc++.h>
 using namespace std;
+#include<string.h>
 
 int main()
 {
-  int n,i;
 
-  cin>>n;
-  int a[n];
-  int k;
-  cin>>k;
+  char ch[1000];
 
-  for(i=0;i<n;i++)
+scanf("%s",ch);
+
+  int i,freq[26]={0},pos=0;
+
+  for(i=0;i<=strlen(ch);i++)
   {
-    cin>>a[i];
-}
-int f=0;
 
-for(i=0;i<n;i++)
-{
-  if(a[i]==k)
-  {
-    f++;
+    freq[ch[i]-97]++;
   }
-}
-cout<<f;
+int   max=freq[0];
+  for(i=0;i<26;i++)
+  {
+    if(max<freq[i])
+    {
+      max=freq[i];
+      pos=i;
+    }
+
+
+  }
+  char p=pos+97;
+  cout<<ch[pos+97];
 
   return 0;
 }

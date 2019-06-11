@@ -3,34 +3,24 @@ using namespace std;
 
 int main()
 {
-  int n,i;
-
+  int n;
   cin>>n;
-  int a[n];
 
+  char ch[n];
 
-  for(i=0;i<n;i++)
+  scanf("%s",ch);
+
+  int i,c=0;
+
+  for(i=0;i<=n;i++)
   {
-    cin>>a[i];
-  }
-  sort(a,a+n);
-int  max=a[n-1];
-
-
-
-  int f[max+1] = {0};
-
-  for(i=0;i<n;i++)
-  {
-    f[a[i]]++;
-  }
-
-    for(i=0;i<n;i++)
+    if(ch[i]>='0' && ch[i]<='9')
     {
-        if(a[i]!=a[i+1])
-        cout<<a[i]<<":"<<f[a[i]]<<endl;
-      }
-
+      c++;
+    //  cout<<"hello";
+    }
+  }
+  cout<<c;
 
   return 0;
 }
