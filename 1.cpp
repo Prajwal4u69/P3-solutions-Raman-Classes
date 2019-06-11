@@ -3,43 +3,23 @@ using namespace std;
 
 int main()
 {
-  int n,i;
-
+  int n;
   cin>>n;
-  int a[n];
-  int k;
-  cin>>k;
+
+  char ch[n];
+
+  scanf("%s",ch);
+
+  int i;
 
   for(i=0;i<n;i++)
   {
-    cin>>a[i];
+    if(ch[i]>=97 && ch[i]<=122)
+    {
+      ch[i]=ch[i]-32;
+    }
   }
-  sort(a,a+n);
+  cout<<ch;
 
-  int j;
-  i=0;
-  j=n-1;
-int flag=1;
-  while(i<n && j>=0)
-  {
-    if(a[i]+a[j]<k)
-    {
-      i++;
-    }
-    if(a[i]+a[j]>k)
-    {
-      j--;
-    }
-    if(a[i]+a[j]==k)
-    {
-      cout<<"Yes";
-      i++;
-      j--;
-      flag=0;
-      break;
-    }
-  }
-  if(flag)
-  cout<<"No";
   return 0;
 }

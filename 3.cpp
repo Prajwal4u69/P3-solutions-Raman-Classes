@@ -1,42 +1,25 @@
-
 #include<bits/stdc++.h>
 using namespace std;
-#include<climits>
+#include<string.h>
 
 int main()
 {
-  int n,i;
 
-  cin>>n;
-  int a[n];
+  char ch[1000];
 
+  cin.getline(ch,1000);
 
-  for(i=0;i<n;i++)
+  int i,c=1;
+
+  for(i=0;i<strlen(ch);i++)
   {
-    cin>>a[i];
-  }
-  sort(a,a+n);
-int  max= a[n-1];
-
-
-
-  int f[max] = {0};
-
-  for(i=0;i<n;i++)
-  {
-    f[a[i]]++;
-  }
-int m=INT_MIN,pos=0;
-
-  for(i=0;i<n;i++)
-  {
-    if(m<f[a[i]])
+    if(ch[i]==' ')
     {
-      m=f[i];
-      pos=i;
+
+          c++;
     }
   }
-  cout<<a[pos];
+  cout<<c++;
 
   return 0;
 }

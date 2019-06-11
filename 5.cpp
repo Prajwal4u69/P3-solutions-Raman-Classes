@@ -3,29 +3,31 @@ using namespace std;
 
 int main()
 {
-  int n,i;
+  int n,i,j;
 
-  cin>>n;
-  int a[n];
-  int a3,b,j;
-  cin>>a3>>b;
-  int b1[a3][b];
+char ch[1000];
+cin.getline(ch,1000);
+int  l =strlen(ch);
+int flag=0;
 
-  for(i=0;i<a3;i++)
+
+  for(i=0,j<l;i<j;i++,j--)
   {
-    for(j=0;j<b;j++)
+    if(ch[i]!=ch[j])
     {
-      cin>>b1[i][j];
+      cout<<"Not Palindrome";
+      flag=1;
+      break;
     }
   }
-  for(i=0;i<a3;i++)
-  {
-    for(j=0;j<b;j++)
-    {
-    cout<<b1[i][j]<<" ";
-    }
-    cout<<endl;
-  }
+  if(!flag)
+  cout<<"Palindrome";
+
+
+
+
+
+
 
   return 0;
 }
